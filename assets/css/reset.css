@@ -80,5 +80,8 @@ fieldset {
 
 body{
   font-family: var(--main-font);
-  
+ background-color: var(--bg-hero-alt);
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
 }

@@ -10,6 +10,7 @@
     min-height: 70vh;
     /*max-height: 90vh;*/
     background-color: var(--bg-yellow);
+    
    
 }
 /* Gruppo di icone decorative */
@@ -63,7 +64,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 5px solid var(--black);
+    border: 5px solid var(--bg-orange);
+    border-radius: 5px;
    
    
 }
@@ -102,7 +104,6 @@
     /* Border */
     border: var(--button-border-width) solid var(--black);
     
-    /* Shadow Brutalist */
     box-shadow: var(--button-shadow-offset) var(--button-shadow-offset) 0 var(--purple);
     
     /* Transition */
@@ -159,9 +160,10 @@
         grid-template-columns: 3fr 2fr;
         padding: var(--spacing-md);
         align-content: center;
-        
+        border: 6px solid var(--red);
+        border-radius: 5px;
         margin-bottom: var(--section-gap-desktop); /* ✅ Spacing desktop */
-        
+        box-shadow: var(--button-shadow-offset) var(--button-shadow-offset) 0 var(--black);
     }
 
 

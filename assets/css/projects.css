@@ -1,7 +1,7 @@
 .projects-container {
     max-width: var(--container-max);
     margin: 0 auto;
-  
+    
     min-height: 80vh;
     padding: var(--spacing-sm);
 }
@@ -35,14 +35,17 @@
 /* SINGLE CARD LAYOUT */
 
 .single-card {
-    border: 4px solid #000;
+    
     display: flex;
     flex-direction: column;
     padding: var(--spacing-sm);
 }
 
 .first {
-    background-color: var(--bg-yellow);
+    background-color: var(--red);
+    border: 6px solid #000;
+    box-shadow: var(--button-shadow-offset) var(--button-shadow-offset) 0 var(--bg-orange);
+    color: var(--bg-white);
 }
 
 .single-card-header {
@@ -58,6 +61,7 @@
     font-weight: var(--font-weight-bold);
     line-height: 1.2;
     flex: 1; /* Occupa lo spazio rimanente */
+    color: var(--black);
 }
 
 .single-card-content {
@@ -66,6 +70,9 @@
 
 .single-card-text {
     padding-bottom: var(--spacing-lg);
+    font-size: var(--single-card-text-size);
+    font-weight: var(--font-weight-semibold);
+    max-inline-size: 30ch;
 }
 
 .single-card-buttons-group {
@@ -89,6 +96,7 @@
 .single-card-number {
     font-size: var(--number-size);
     font-weight: var(--font-weight-bold);
+    color: var(--black);
 }
 
 .single-card-icon {
@@ -104,10 +112,11 @@
 
 .single-card-image {
     background-color: var(--purple);
-    height: clamp(300px, 25vh, 400px);
+    height: clamp(300px, 100%, 600px);
     overflow: hidden;
     border: 3px solid var(--black);
     padding: var(--spacing-lg) var(--spacing-md);
+    object-fit: cover;
 }
 
 .single-card-image img {
@@ -158,7 +167,7 @@
         flex-direction: column;
         justify-content: space-between;
         flex: 1;
-        padding: var(--spacing-md); /* ✅ Ora puoi aggiungere padding qui */
+        
     }
 
     .single-card-footer {

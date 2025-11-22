@@ -38,12 +38,13 @@
   --font-weight-xxbold: 900;
 
   /* Font Sizes - Dimensioni testuali per gerarchia */
-  --logo-title-size: clamp(1.2rem, 4vw, 1.8rem);
-  --menu-item-size: clamp(0.9rem, 2vw, 1.1rem);
+  --logo-title-size: clamp(1.5rem, 4vw, 3rem);
+  --menu-item-size: clamp(1.5rem, 2vw, 2rem);
   --hero-title-size: clamp(4rem, 10vw, 6rem);
   --hero-text-size: clamp(1.5rem, 5vw, 2.5rem);
   --section-title-size: clamp(2.5rem, 6vw, 4rem);
   --section-text-size: clamp(1.5rem, 3vw, 2rem);
+  --single-card-text-size: clamp(1.2rem, 3vw, 1.5rem);
   --single-card-title-size: clamp(1.5rem, 4vw, 1.9rem);
   --button-font-size: clamp(1.2rem, 2.5vw, 1.4rem);
   --number-size: clamp(4rem, 12vw, 10rem);
@@ -84,7 +85,7 @@
    ------------------------------------------------------ */
 
   /* Container Sizes - Dimensioni contenitori */
-  --container-max: 1290px;
+  --container-max: calc(1360px);
   --container-narrow-max: 900px;
   --container-wide-max: 1400px;
   --container-padding: clamp(1rem, 3vw, 2.5rem);
@@ -103,7 +104,7 @@
    ------------------------------------------------------ */
 
   /* Menu Spacing - Spaziature menu */
-  --menu-item-padding: clamp(0.5rem, 1.5vw, 1rem);
+  --menu-item-padding: clamp(1rem, 1.5vw, 1.3rem);
   --menu-item-gap: clamp(1rem, 3vw, 1.5rem);
 
   /* Hamburger Menu - Menu hamburger mobile */
