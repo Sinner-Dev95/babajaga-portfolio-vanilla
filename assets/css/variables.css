@@ -1,0 +1,154 @@
+:root {
+
+  /* ======================================================
+   SYSTEM FOUNDATIONS - Variabili base del sistema
+   ====================================================== */
+
+  /* ------------------------------------------------------
+   COLORS - Palette cromatica del progetto
+   ------------------------------------------------------ */
+
+  /* Background Colors - Sfondi principali */
+  --bg-yellow: hsl(48, 79%, 92%);
+  --bg-white: #fff;
+  --bg-orange: #FF9243;
+  --bg-hero-alt: #f5f5f5;
+
+  /* Brand Colors - Colori brand del progetto */
+  --red: #da2528a9;
+  --black: #000;
+  --green: #00FF85;
+  --green-accent: rgba(0, 255, 181, 0.41);
+  --purple: #af45f0;
+
+  /* ------------------------------------------------------
+   TYPOGRAPHY - Font e gerarchia testuale
+   ------------------------------------------------------ */
+
+  /* Font Families - Famiglie di caratteri */
+  --main-font: "Geist", sans-serif;
+  --secondary-font: "Space Grotesk", sans-serif;
+
+  /* Font Weights - Pesatura dei font */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-xbold: 800;
+  --font-weight-xxbold: 900;
+
+  /* Font Sizes - Dimensioni testuali per gerarchia */
+  --logo-title-size: clamp(1.2rem, 4vw, 1.8rem);
+  --menu-item-size: clamp(0.9rem, 2vw, 1.1rem);
+  --hero-title-size: clamp(4rem, 10vw, 6rem);
+  --hero-text-size: clamp(1.5rem, 5vw, 2.5rem);
+  --section-title-size: clamp(2.5rem, 6vw, 4rem);
+  --section-text-size: clamp(1.5rem, 3vw, 2rem);
+  --single-card-title-size: clamp(1.5rem, 4vw, 1.9rem);
+  --button-font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+  --number-size: clamp(4rem, 12vw, 10rem);
+
+  /* ------------------------------------------------------
+   SPACING - Sistema di spaziature
+   ------------------------------------------------------ */
+
+  /* Section Spacing - Spaziature tra sezioni */
+  /*--section-gap-mobile: clamp(6.25rem, 12vw, 9.375rem); /* ✅ 100px - 150px */
+  /*--section-gap-desktop: clamp(7.5rem, 10vw, 11.25rem); /* ✅ 120px - 180px */
+
+
+
+  /* ------------------------------------------------------
+   ABOUT SECTION - Sezione chi sono
+   ------------------------------------------------------ */
+
+/* About Dimensions */
+--about-shape-large: clamp(200px, 40vw, 350px);
+--about-shape-small: clamp(150px, 30vw, 280px);
+--about-image-size: clamp(250px, 50vw, 400px);
+
+  /* Scale Spacing - Scala di spaziature base */
+  --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --spacing-sm: clamp(0.75rem, 1.5vw, 1.25rem);
+  --spacing-md: clamp(1rem, 2vw, 1.75rem);
+  --spacing-lg: clamp(1.5rem, 3vw, 2.5rem);
+  --spacing-xl: clamp(2rem, 4vw, 3.5rem);
+
+
+  /* ======================================================
+   LAYOUT COMPONENTS - Componenti specifici
+   ====================================================== */
+
+  /* ------------------------------------------------------
+   CONTAINER - Sistema di contenitori
+   ------------------------------------------------------ */
+
+  /* Container Sizes - Dimensioni contenitori */
+  --container-max: 1290px;
+  --container-narrow-max: 900px;
+  --container-wide-max: 1400px;
+  --container-padding: clamp(1rem, 3vw, 2.5rem);
+
+  /* ------------------------------------------------------
+   BUTTONS - Stile bottoni e interazioni
+   ------------------------------------------------------ */
+
+  /* Button Dimensions - Dimensioni bottoni */
+  --button-padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
+  --button-border-width: clamp(3px, 0.5vw, 5px);
+  --button-shadow-offset: clamp(4px, 1vw, 8px);
+
+  /* ------------------------------------------------------
+   NAVIGATION - Menu e navigazione
+   ------------------------------------------------------ */
+
+  /* Menu Spacing - Spaziature menu */
+  --menu-item-padding: clamp(0.5rem, 1.5vw, 1rem);
+  --menu-item-gap: clamp(1rem, 3vw, 1.5rem);
+
+  /* Hamburger Menu - Menu hamburger mobile */
+  --hamburger-width: clamp(20px, 4vw, 30px);
+  --hamburger-height: clamp(2px, 0.5vw, 4px);
+  --hamburger-gap: clamp(2px, 0.4vw, 4px);
+  --hamburger-click-area: clamp(50px, 10vw, 60px);
+
+  /* ------------------------------------------------------
+   HERO SECTION - Sezione principale
+   ------------------------------------------------------ */
+
+  /* Hero Layout - Layout sezione hero */
+  --hero-gap: clamp(1rem, 4vw, 1.5rem);
+
+  /* ------------------------------------------------------
+   ICONS - Icone e elementi grafici
+   ------------------------------------------------------ */
+
+  /* Icon Sizes - Dimensioni icone */
+  --icon-size: clamp(30px, 5vw, 70px);
+  --single-card-icon-size: clamp(20px, 5vw, 30px);
+
+  /* ------------------------------------------------------
+   LOGO - Logo del brand
+   ------------------------------------------------------ */
+
+  /* Logo Dimensions - Dimensioni logo */
+  --size-logo: clamp(50px, 10vw, 100px);
+
+
+  /* ======================================================
+   ANIMATIONS & INTERACTIONS - Dinamiche UI
+   ====================================================== */
+
+  /* ------------------------------------------------------
+   TRANSITIONS - Animazioni e transizioni
+   ------------------------------------------------------ */
+
+  /* Hamburger Transitions - Animazioni menu hamburger */
+  --hamburger-transition: all 0.3s ease;
+
+  /* Menu Hover Effects - Effetti hover menu */
+  --menu-item-transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --menu-item-hover-translate: -2px;
+
+}

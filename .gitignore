@@ -1,0 +1,41 @@
+nano .gitignore
+```
+
+Poi copia e incolla questo contenuto completo:
+```
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (se userai npm in futuro)
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+.env.local
+
+# Build files
+dist/
+build/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db

@@ -1,0 +1,198 @@
+#header {
+    background-color: var(--bg-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--main-font);
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--container-max);
+    padding: clamp(0.75rem, 2vw, 1rem) 0;
+    position: relative;  /* ← Prima relative */
+    position: sticky;    /* ← Poi sticky */
+    top: 0;
+   
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--hamburger-gap);
+}
+
+
+
+.logo-image {
+    width: var(--size-logo);
+    height: auto;
+    cursor: pointer;
+}
+
+.logo-title{
+    font-size: var(--logo-title-size);
+}
+
+.logo-title-span{
+    color: var(--red);
+}
+
+
+
+/* Hamburger Icon Container */
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--hamburger-click-area);  /* ← Nuova variabile */
+    height: var(--hamburger-click-area);  /* ← Responsive e WCAG */
+    cursor: pointer;
+    transition: var(--hamburger-transition); /* ← Variabile per transizioni */
+    position: relative;
+
+    /* gestine selezione e ux ui hgamburger*/
+     user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation; /* Disabilita zoom su tap */
+}
+
+
+
+.hamburger-stripe {
+    width: var(--hamburger-width);
+    height: var(--hamburger-height);
+    background-color: var(--black);
+    transition: var(--hamburger-transition);
+    transform-origin: center;
+    border-radius: 2px;
+}
+
+
+.hamburger-stripe:nth-child(1) {
+    margin-bottom: var(--hamburger-gap);
+}
+
+.hamburger-stripe:nth-child(2) {
+    margin-bottom: var(--hamburger-gap);
+}
+
+/* Hover Effects */
+.hamburger-icon:hover .hamburger-stripe:first-child {
+    transform: translateX(3px) scaleX(1.1);
+}
+
+.hamburger-icon:hover .hamburger-stripe:last-child {
+    transform: translateX(-3px) scaleX(1.1);
+}
+
+.hamburger-icon:hover .hamburger-stripe:nth-child(2) {
+    transform: scaleX(0.9);
+}
+
+/* Active State (X transformation) */
+.hamburger-icon.active .hamburger-stripe:nth-child(1) {
+    transform: rotate(45deg) translate(calc(var(--hamburger-gap) * 2), calc(var(--hamburger-gap) * 2));
+}
+
+.hamburger-icon.active .hamburger-stripe:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger-icon.active .hamburger-stripe:nth-child(3) {
+    transform: rotate(-45deg) translate(calc(var(--hamburger-gap) * 2), calc(var(--hamburger-gap) * -2));
+}
+
+
+.hamburger-icon.active:hover {
+    transform: scale(1.1);
+}
+
+
+.hamburger-icon:focus {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.menu {
+    width: 100%;
+     position: absolute; 
+    top: 100%;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+    /* righe fondamentali per nasocnde menu */
+    transform: translateY(-100%); 
+    opacity: 0;
+    visibility: hidden;
+    
+    /*============================*/
+    display: flex;
+    justify-content: flex-end;
+   
+}
+
+/*classe per aprire menu hamburger */
+
+.menu.active {
+    transform: translateY(0);    /* Menu visibile */
+    opacity: 1;                  /* Visibile */
+    visibility: visible;         /* Accessibile */
+}
+
+
+.menu-list-item-link {
+    font-size: var(--menu-item-size);
+    font-weight: var(--font-weight-medium);
+    padding: var(--menu-item-padding);
+    transition: var(--menu-item-transition);
+    display: inline-block; /* Necessario per transform */
+}
+.menu-list-item-link:hover {
+    transform: translateY(var(--menu-item-hover-translate));
+    color: var(--red); /* O altro colore hover */
+}
+
+
+ .header-button {
+        display: none;
+        font-size: var(--menu-item-size);
+    }
+ .header-button a{
+        
+        font-size: var(--menu-item-size);
+    }
+
+
+@media (min-width: 768px) {
+    #header{
+        padding: 0;
+    }
+    .hamburger-icon {
+        display: none; 
+    }
+    
+    .menu{
+        position: static;
+        justify-content: center;
+        width: auto;
+
+         transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: none !important;
+    }
+
+    .menu-list {
+        display: flex;
+        gap: clamp(1rem, 15vw, 1.5rem);
+    }
+
+    .header-button {
+        display: block;
+        
+    }
+
+
+}

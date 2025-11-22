@@ -1,0 +1,84 @@
+/* ===================================== */
+/* RESET CSS - Brutalist Portfolio      */
+/* ===================================== */
+
+/* Box sizing per tutti gli elementi */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Rimuovi margin e padding di default */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Media elements - display block e responsive */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form elements - ereditano font dal parent */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Previeni overflow del testo */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Rimuovi stile default dalle liste */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Rimuovi underline dai links di default */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Impostazioni body per brutalist */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Rimuovi bordi default da iframe, fieldset */
+iframe {
+  border: 0;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+/* Rimuovi outline default (lo aggiungeremo noi) */
+:focus {
+  outline: 0;
+}
+
+body{
+  font-family: var(--main-font);
+  
+}

@@ -1,0 +1,177 @@
+.projects-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+  
+    min-height: 80vh;
+    padding: var(--spacing-sm);
+}
+
+.projects-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding:var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+
+}
+
+.projects-title {
+    font-size: var(--section-title-size);
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+}
+
+.projects-text p {
+    font-size: var(--section-text-size) !important;
+}
+
+.project-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    padding: 0 ;
+}
+
+/* SINGLE CARD LAYOUT */
+
+.single-card {
+    border: 4px solid #000;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-sm);
+}
+
+.first {
+    background-color: var(--bg-yellow);
+}
+
+.single-card-header {
+    display: flex;
+    align-items: center;
+   gap: var(--spacing-sm); /* Spazio tra icona e titolo */
+    margin-bottom: var(--spacing-md); /* Spazio sotto l'header */
+    padding-bottom: 0;
+}
+
+.single-card-header h3 {
+    font-size: var(--single-card-title-size);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    flex: 1; /* Occupa lo spazio rimanente */
+}
+
+.single-card-content {
+    font-size: var(--button-font-size);
+}
+
+.single-card-text {
+    padding-bottom: var(--spacing-lg);
+}
+
+.single-card-buttons-group {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.single-card-button a::after {
+    content: "↗"; /* La freccia */
+    margin-left: 0.5rem; /* Spazio tra testo e freccia */
+    font-size: 1.2em; /* Dimensione freccia */
+    display: inline-block;
+    transition: transform 0.2s ease; /* Animazione opzionale */
+}
+
+/* Hover effect - freccia si muove */
+.single-card-button a:hover::after {
+    transform: translate(2px, -2px); /* Si sposta in diagonale */
+}
+
+.single-card-number {
+    font-size: var(--number-size);
+    font-weight: var(--font-weight-bold);
+}
+
+.single-card-icon {
+    width: var(--icon-size);
+    flex-shrink: 0;
+}
+
+.single-card-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.single-card-image {
+    background-color: var(--purple);
+    height: clamp(300px, 25vh, 400px);
+    overflow: hidden;
+    border: 3px solid var(--black);
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.single-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.single-card-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: var(--spacing-md);
+}
+
+/* MEDIA QUERY DESKTOP */
+@media (min-width: 1024px) {
+
+    .project-cards {
+        padding: 0;
+    }
+
+    
+
+    .single-card {
+        display: flex;
+        margin-bottom: var(--spacing-xl);
+        position: relative; /* ✅ Mantieni questo */
+    }
+
+    .single-card-main {
+        flex-direction: row;
+        align-items: stretch;
+        gap: var(--spacing-md);
+        position: relative; /* ✅ AGGIUNGI QUESTO */
+    }
+
+    .single-card-image {
+        min-width: 300px;
+        max-width: 400px;
+        height: 350px;
+        flex-shrink: 0;
+    }
+
+    .single-card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        padding: var(--spacing-md); /* ✅ Ora puoi aggiungere padding qui */
+    }
+
+    .single-card-footer {
+        position: static; /* ✅ CAMBIA DA relative a static */
+        margin-top: auto;
+    }
+
+    /* ✅ NUMERO POSIZIONATO RISPETTO A .single-card-main */
+    .single-card-number {
+      
+    position: absolute;
+    bottom: clamp(-20px, -5vw, -60px); /* Scalabile */
+    right: 0;
+    z-index: 10;
+}
+    }
